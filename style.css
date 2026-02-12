@@ -1122,7 +1122,7 @@ font-size: var(--normal-font);
 }
 
 /* ===== Button ===== */
-.formBtn{
+.btn{
    display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1140,10 +1140,9 @@ font-size: var(--normal-font);
     
     transition: color .4s ease;
 }
-
-#sendBtn{
+#btn{
     padding: 12px 30px;
-    background: #12f7ff;
+    background:var(--second-bg-color);
     color: #250821;
     border: none;
     border-radius: 30px;
@@ -1152,14 +1151,13 @@ font-size: var(--normal-font);
     transition: 0.3s ease;
 }
 
-#sendBtn:hover{
-    background: #0fd6e6;
+#btn:hover{
+    background: var(--hover-color);
+    
     
 }
 
-/* ===== Responsive ===== */
 
-/* Tablet */
 @media (max-width: 768px){
     .Contect{
         padding: 60px 6%;
@@ -1170,7 +1168,6 @@ font-size: var(--normal-font);
     }
 }
 
-/* Mobile */
 @media (max-width: 480px){
     .Contect{
         padding: 50px 5%;

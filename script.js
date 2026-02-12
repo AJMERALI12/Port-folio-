@@ -14,5 +14,19 @@ menuIcon.onclick = () => {
 
 
 
+emailjs.init("XjuqA_t8kNPlxfIIS");
 
+document.getElementById("form-data").addEventListener("submit",function(e){
+    e.preventDefault();
+    emailjs.sendform();
+    emailjs.sendForm(
+        "service_txdlcdm",
+        "template_9q79t9e",
+        this
+    ).then(
+        function(error){
+            alert("Failed ❌" + error);
+        }
+    );
+});
 
