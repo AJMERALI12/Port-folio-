@@ -14,19 +14,31 @@ menuIcon.onclick = () => {
 
 
 
-emailjs.init("XjuqA_t8kNPlxfIIS");
 
-document.getElementById("form-data").addEventListener("submit",function(e){
-    e.preventDefault();
-    emailjs.sendform();
-    emailjs.sendForm(
-        "service_txdlcdm",
-        "template_9q79t9e",
-        this
-    ).then(
-        function(error){
-            alert("Failed ❌" + error);
-        }
-    );
+
+(function(){
+emailjs.init("XjuqA_t8kNPlxfIIS"); // EmailJS public key
+})();
+
+document.getElementById("form-data")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"service_txdlcdm",
+ "template_9q79t9e",
+this
+).then(
+function(){
+alert("Message Sent Successfully");
+document.getElementById("form-data").reset();
+},
+function(error){
+alert("Failed to send message");
+console.log(error);
+}
+);
+
 });
 
