@@ -99,61 +99,122 @@ span{
 }
 
 
-@media (max-width: 768px){
+/* ===== DEFAULT (PC / LARGE SCREENS) ===== */
+#menu-icon {
+    display: none;
+}
 
-    #menu-icon{
-        display: block;
+.navlist {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navlist a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.change-text h3 .world {
+    font-size: 2rem;
+}
+
+.change-text span {
+    font-size: 1.2rem;
+}
+
+
+/* ===== TABLET (<= 1024px) ===== */
+@media (max-width: 1024px) {
+    .navlist {
+        gap: 20px;
     }
 
-    .navlist{
+    .navlist a {
+        font-size: 1.1rem;
+    }
+
+    .change-text h3 .world {
+        font-size: 1.5rem;
+        display: block;
+        margin-top: 25px;
+    }
+
+    .change-text span {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+
+/* ===== MOBILE (<= 768px) ===== */
+@media (max-width: 768px) {
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navlist {
         position: fixed;
         top: 0;
-        
         right: -100%;
-        width: 50%;
-        height: auto;
+        width: 60%;
+        height: 100vh;
         background: var(--second-bg-color);
-        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         padding-top: 100px;
         transition: 0.4s ease;
         z-index: 1000;
     }
 
-    .navlist a{
+    .navlist a {
         display: block;
-        margin: 15px 0;
+        margin: 20px 0;
         font-size: 1.2rem;
     }
 
-    .navlist.active{
+    .navlist.active {
         right: 0;
     }
-    .change-text h3  .world{
-        font-size: 1rem;
-        display: inline-block;
-       
+
+    .change-text h3 .world {
+        font-size: 1.2rem;
+        text-align: center;
+        
     }
-   
+
+    .change-text span {
+        font-size: 1rem;
+        display:block ;
+        margin-top: 25px;
+    
+    }
 }
 
 
+/* ===== SMALL MOBILE (<= 480px) ===== */
+@media (max-width: 480px) {
 
-
-@media (max-width: 480px){
-
-    .navlist{
+    .navlist {
         width: 75%;
     }
 
-    .navlist a{
-
-        font-size: 1.1rem;
+    .navlist a {
+        font-size: 1rem;
     }
 
-    .change-text h3 .world{
+    .change-text h3 .world {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .change-text span {
         font-size: 0.9rem;
+        display:block ;
+        margin-top: 5px;
     }
 }
 
