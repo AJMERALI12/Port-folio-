@@ -20,7 +20,7 @@ menuIcon.onclick = () => {
 emailjs.init("XjuqA_t8kNPlxfIIS"); // EmailJS public key
 })();
 
-document.getElementById("form-data")
+document.getElementById("form")
 .addEventListener("submit", function(e){
 
 e.preventDefault();

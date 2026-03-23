@@ -1158,7 +1158,12 @@ font-size: var(--normal-font);
     text-align: center;
     margin-bottom: 40px;
 }
-
+.main-text img{
+    width: 60px;
+    
+    
+    margin-bottom: -50px;
+}
 .main-text span{
     color: #12f7ff;
     font-size: 14px;
@@ -1169,10 +1174,12 @@ font-size: var(--normal-font);
 .main-text h3{
     font-size: 32px;
     margin-top: 10px;
+    text-align: center;
+    margin-right: 50px;
 }
 
 
-#form-data{
+#form{
     max-width: 700px;
     margin: auto;
     display: flex;
@@ -1180,27 +1187,27 @@ font-size: var(--normal-font);
     gap: 20px;
 }
 
-#form-data input,
-#form-data textarea{
+#form input,
+#form textarea{
     width: 100%;
     padding: 14px 16px;
     border-radius: 8px;
     border: 1px solid transparent;
     outline: none;
-    background: #292e33;
+  
     color: #fff;
     font-size: 15px;
     transition: 0.3s ease;
 }
 
-#form-data input::placeholder,
-#form-data textarea::placeholder{
+#form input::placeholder,
+#form textarea::placeholder{
     color: #aaa;
 }
 
 
-#form-data input:focus,
-#form-data textarea:focus{
+#form input:focus,
+#form textarea:focus{
     border: 1px solid #12f7ff;
     background: #1f2428;
 }
